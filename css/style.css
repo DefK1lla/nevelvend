@@ -96,10 +96,6 @@ html, body{
     overflow-x: hidden;
 }
 
-/* html{
-    scroll-behavior: smooth; 
-} */
-
 body{
     font-weight: 400;
     font-size: 22px;
@@ -925,17 +921,18 @@ input[type='number'] {
 }
 
 .modal__privacy{
-    margin: 0 35px;
+    max-width: 496px;
 
     display: none;
 
+    margin: 0 35px;
 }
 
 .modal__list{
-    counter-reset: section;           
-    list-style-type: none;
+    max-width: 496px;
 
-    
+    counter-reset: section;           
+    list-style-type: none;    
 }
 
 .tree__head{
