@@ -865,8 +865,8 @@ input[type='number'] {
     display: none;
 
     max-width: 750px;
-    /* height: 660px; */
     width: 100%;
+    
     min-height: 500px;
 }
 
