@@ -865,10 +865,10 @@ input[type='number'] {
 .modal__order{
     display: none;
 
-    max-width: 750px;
     width: 100%;
     
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     min-height: 500px;
 }
@@ -928,8 +928,6 @@ input[type='number'] {
     display: none;
 
     max-width: 496px;
-    height: 660px;
-    overflow: auto;
 
     margin: 0 35px;
 }
@@ -957,12 +955,9 @@ input[type='number'] {
 .tree__head::after{
     content: url(../img/privacy-policy/arrow.svg);
 
-   
-
     position: absolute;
 
     right: 15px;
-
 }
 
 .tree__head--active::after{
