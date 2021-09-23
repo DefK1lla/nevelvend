@@ -848,7 +848,9 @@ input[type='number'] {
 
 .modal__inner{
     position: relative;
+    
     max-width: 700px;
+    max-height: 660px;
     
     overflow: auto;
 
@@ -928,9 +930,6 @@ input[type='number'] {
     display: none;
 
     max-width: 496px;
-    height: 650px;
-    
-    overflow: auto;
 
     margin: 0 35px;
 }
