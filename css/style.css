@@ -849,7 +849,6 @@ input[type='number'] {
 .modal__inner{
     position: relative;
     max-width: 700px;
-    height: 660px;
     overflow: auto;
 
     background: #EDEDED;
@@ -866,6 +865,7 @@ input[type='number'] {
     display: none;
 
     max-width: 750px;
+    /* height: 660px; */
     width: 100%;
     min-height: 500px;
 }
@@ -922,9 +922,10 @@ input[type='number'] {
 }
 
 .modal__privacy{
-    max-width: 496px;
-
     display: none;
+
+    max-width: 496px;
+    height: 660px;
 
     margin: 0 35px;
 }
