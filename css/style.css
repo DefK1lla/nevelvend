@@ -849,6 +849,7 @@ input[type='number'] {
 .modal__inner{
     position: relative;
     max-width: 700px;
+    
     overflow: auto;
 
     background: #EDEDED;
@@ -929,6 +930,7 @@ input[type='number'] {
 
     max-width: 496px;
     height: 660px;
+    overflow: auto;
 
     margin: 0 35px;
 }
@@ -1321,6 +1323,19 @@ input[type='number'] {
         padding-right: 30px;
     }
 
+    .footer__contacts{
+        display: block;
+        margin-bottom: 59px;
+
+        font-family: "Rubik", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+
+        text-align: center;
+
+        color: #EAEAEA;
+    }
+
     .footer__items{
         flex-wrap: wrap;
     }
@@ -1344,7 +1359,7 @@ input[type='number'] {
 
     .modal__inner{
         width: 100%;
-        padding-bottom: 70px;
+        max-height: 500px;
     }
 
     .modal__privacy{
@@ -1366,19 +1381,6 @@ input[type='number'] {
     .tree__head::after{    
         position: absolute;
         right: -15px;
-    }
-
-    .footer__contacts{
-        display: block;
-        margin-bottom: 59px;
-
-        font-family: "Rubik", sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-
-        text-align: center;
-
-        color: #EAEAEA;
     }
 }
     
