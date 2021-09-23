@@ -96,9 +96,9 @@ html, body{
     overflow-x: hidden;
 }
 
-html{
+/* html{
     scroll-behavior: smooth; 
-}
+} */
 
 body{
     font-weight: 400;

@@ -1,3 +1,22 @@
+// Smooth scroll
+const links = document.querySelectorAll('[data-scroll]');
+
+let elementId, elementOffset;
+
+links.forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    elementId = link.dataset.scroll;
+    elementOffset = document.querySelector(elementId).getBoundingClientRect().top;
+    
+    window.scrollBy({
+      top: elementOffset,
+      behavior: "smooth"
+    });
+  });
+});
+
+
 // Menu
 const menuBtn = document.querySelector('.menu-btn'),
   menu = document.querySelector('.menu');
