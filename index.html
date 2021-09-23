@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- SVG Sprites -->
+<svg style="display: none">
+  <symbol id="instagram" viewBox="0 0 511 511.9"> 
+    <g>
+      <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+    </g>
+  </symbol>
+
+  <symbol id="facebook" viewBox="0 0 24 24">
+    <g>
+      <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+    </g>
+  </symbol>
+
+  <symbol id="vk" viewBox="0 0 532.337 532.337">
+    <g>
+      <path d="M471.998,241.286c7.57-9.786,13.58-17.638,18.018-23.562c31.965-42.498,45.82-69.646,41.574-81.482l-1.666-2.772
+        c-1.107-1.665-3.977-3.194-8.592-4.578c-4.621-1.383-10.533-1.604-17.736-0.691l-79.822,0.563
+        c-1.848-0.184-3.697-0.141-5.545,0.128c-1.848,0.281-3.047,0.563-3.605,0.832c-0.557,0.282-1.016,0.508-1.383,0.692l-1.107,0.832
+        c-0.924,0.551-1.939,1.524-3.047,2.914c-1.109,1.389-2.039,2.999-2.773,4.853c-8.684,22.356-18.568,43.146-29.656,62.363
+        c-6.838,11.457-13.123,21.396-18.844,29.792c-5.729,8.415-10.533,14.603-14.414,18.568c-3.879,3.972-7.393,7.166-10.531,9.56
+        c-3.146,2.411-5.545,3.421-7.203,3.054c-1.666-0.367-3.238-0.734-4.713-1.114c-2.588-1.658-4.67-3.917-6.236-6.787
+        c-1.572-2.857-2.631-6.463-3.189-10.808c-0.551-4.339-0.881-8.084-0.967-11.23c-0.098-3.139-0.049-7.57,0.141-13.305
+        c0.184-5.729,0.275-9.602,0.275-11.64c0-7.014,0.141-14.639,0.418-22.864c0.275-8.219,0.508-14.737,0.691-19.542
+        c0.184-4.798,0.275-9.884,0.275-15.245c0-5.349-0.324-9.56-0.975-12.613c-0.648-3.042-1.621-5.998-2.906-8.868
+        c-1.297-2.858-3.189-5.08-5.686-6.646c-2.496-1.573-5.588-2.815-9.283-3.746c-9.799-2.222-22.271-3.409-37.418-3.604
+        c-34.37-0.355-56.451,1.86-66.243,6.658c-3.88,2.038-7.393,4.804-10.532,8.317c-3.329,4.07-3.788,6.291-1.383,6.646
+        c11.089,1.665,18.936,5.643,23.556,11.922l1.665,3.323c1.291,2.411,2.583,6.659,3.88,12.754c1.292,6.096,2.124,12.84,2.497,20.233
+        c0.924,13.488,0.924,25.031,0,34.646c-0.924,9.614-1.799,17.093-2.631,22.442c-0.833,5.361-2.081,9.7-3.74,13.023
+        c-1.665,3.335-2.772,5.367-3.329,6.107c-0.557,0.734-1.016,1.199-1.383,1.384c-2.405,0.918-4.896,1.383-7.484,1.383
+        c-2.589,0-5.729-1.298-9.425-3.887c-3.697-2.576-7.534-6.138-11.5-10.667c-3.978-4.522-8.452-10.856-13.446-18.99
+        c-4.988-8.121-10.166-17.736-15.521-28.819l-4.431-8.042c-2.772-5.165-6.561-12.699-11.365-22.583s-9.058-19.443-12.748-28.69
+        c-1.481-3.874-3.697-6.83-6.652-8.868l-1.383-0.832c-0.924-0.735-2.405-1.524-4.437-2.351c-2.038-0.832-4.155-1.432-6.377-1.805
+        l-75.943,0.551c-7.76,0-13.023,1.763-15.795,5.275l-1.108,1.659C0.275,136.059,0,137.54,0,139.566
+        c0,2.038,0.557,4.529,1.665,7.479c11.089,26.059,23.146,51.188,36.169,75.386c13.03,24.211,24.346,43.709,33.954,58.489
+        c9.608,14.792,19.4,28.733,29.382,41.854c9.982,13.121,16.585,21.523,19.816,25.214c3.231,3.703,5.771,6.476,7.62,8.317
+        l6.928,6.658c4.431,4.432,10.949,9.743,19.542,15.937c8.592,6.193,18.103,12.289,28.55,18.287
+        c10.435,6.01,22.589,10.899,36.444,14.694c13.856,3.794,27.344,5.317,40.465,4.571h31.874c6.469-0.551,11.363-2.576,14.688-6.096
+        l1.107-1.383c0.734-1.102,1.432-2.815,2.08-5.123c0.643-2.307,0.975-4.853,0.975-7.619c-0.191-7.943,0.416-15.116,1.799-21.481
+        c1.383-6.377,2.955-11.175,4.713-14.418c1.756-3.226,3.738-5.955,5.959-8.177c2.217-2.222,3.783-3.55,4.713-4.015
+        c0.924-0.453,1.666-0.777,2.217-0.973c4.43-1.476,9.65-0.043,15.66,4.296c6.004,4.352,11.641,9.7,16.91,16.077
+        c5.262,6.377,11.59,13.531,18.984,21.481c7.387,7.943,13.855,13.855,19.4,17.735l5.545,3.336
+        c3.695,2.209,8.494,4.241,14.412,6.096c5.912,1.842,11.09,2.307,15.52,1.383l70.955-1.114c7.02,0,12.473-1.15,16.354-3.464
+        c3.879-2.295,6.188-4.853,6.928-7.619c0.734-2.772,0.783-5.899,0.141-9.419c-0.648-3.507-1.297-5.955-1.939-7.338
+        c-0.648-1.383-1.25-2.546-1.807-3.464c-9.24-16.628-26.885-37.051-52.938-61.255l-0.557-0.551l-0.275-0.281l-0.275-0.27H473.4
+        c-11.83-11.273-19.309-18.85-22.449-22.736c-5.727-7.38-7.025-14.865-3.879-22.441
+        C449.275,271.874,457.586,259.769,471.998,241.286z"/>
+    </g>
+  </symbol>
+</svg>
+
+  <div class="wrapper">
+    
+    <div class="screen">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <img class="logo" src="img/Logo.svg" alt="logo nevlvend">
+            
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#about">о размешивателе</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#order">заказать</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#individual-price">индивидуальная цена</a>
+                </li>
+
+                <li class="menu__item menu__item--contacts">
+                  <a class="menu__link" href="#contacts">контакы</a>
+                </li>
+              </ul>
+            </nav>
+
+            <button class="menu-btn">
+              <span class="menu-btn__item">menu</span>
+            </button>
+          </div> <!-- /.header__inner -->
+        </div> <!-- /.container -->
+      </header>
+      <section class="intro screen__body">
+        <div class="container">
+           <div class="intro__inner">
+            <h1 class="intro__title">
+              <span>Одноразовый</span> пластиковый <span>размешиватель</span> для холодных и горячих напитков
+            </h1>
+
+            <p class="intro__text"><span>От <u>30 копеек</u> за штуку.</span> Подходит для холодных и горячих напитков, для вендинга и HoReCa </p>
+
+            <div class="intro__buttons">
+              <a class="intro__btn" href="#">Заказать</a>
+              <a class="intro__btn" href="#">Узнать больше</a>
+            </div>
+
+            <img src="img/intro/bg2.png" alt="">
+          </div> <!-- /.intro__inner -->
+        </div> <!-- /.cotntaner -->
+      </section> <!-- /.intro -->
+    </div>  <!-- /.screen -->
+  
+<!-- About -->
+    <div class="screen">
+      <section class="about screen__body" id="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__items">
+              <div class="about__item">
+                <h2 class="about__title title">Недорогой</h2>
+                <p class="about__text text">Одноразовый пластиковый размешиватель Nevelvend для холодных и горячих напитков вы можете,
+                    выбрав тип и количество коробок ниже</p>
+              </div>
+              <div class="about__item about__item--small-bg">
+                <h2 class="about__title title">Качественный</h2>
+                <p class="about__text">Одноразовый пластиковый размешиватель Nevelvend для холодных и горячих напитков вы можете,
+                    выбрав тип и количество коробок ниже</p>
+              </div>
+              <div class="about__item about__item--down-bg">
+                <h2 class="about__title about__title--big title">От производителя</h2>
+                <h2 class="about__title about__title--small title">Экологичный</h2>
+                <p class="about__text">Одноразовый пластиковый размешиватель Nevelvend для холодных и горячих напитков вы можете,
+                    выбрав тип и количество коробок ниже</p>
+              </div>
+            </div>
+          </div> <!-- /.about__inner -->
+        </div> <!-- /.container -->
+      </section> <!-- /.about -->
+    </div> <!-- /.screen -->
+    
+<!-- Order -->
+    <div class="screen">
+      <section class="order screen__body" id="order">
+        <div class="container">
+          <div class="order__inner">
+            <div class="order__head head">
+            <h2 class="order__title title">Заказать</h2>
+              <p class="order__text text">Одноразовый пластиковый размешиватель Nevelvend для холодных и горячих напитков вы можете,
+                выбрав тип и количество коробок ниже</p>
+            </div>
+
+              <div class="order__info">
+                <div class="order__tabs">
+                  <div class="tabs">
+                    <div class="tabs__items">
+                        <button class="tabs__item" data-tab="#tab_01">Характеристики</button>
+                        <button class="tabs__item" data-tab="#tab_02">Упаковка</button>
+                        <button class="tabs__item" data-tab="#tab_03">Доставка и оплата</button>
+                    </div>
+    
+                    <div class="tabs__body">
+                        <div class="tabs__block tab-active" id="tab_01">
+                          <ul class="tabs__list">
+                            <li>Длина: 105 мм</li>
+                            <li>Количество кассет в блоке: 25 шт</li>
+                            <li>Количество изделий в кассете: 100 шт</li>
+                            <li>Общее количество в блоке: 2 500 шт</li>
+                          </ul>                        
+                        </div>
+                        <div class="tabs__block" id="tab_02">
+                          <ul class="tabs__list">
+                            <li>Коробка 2500 шт, масса нетто 2,5 кг</li>
+                            <li>Групповая коробка 20 000 шт, масса нетто 20 кг</li>
+                            <li>Минимальный заказ - коробка 2500 шт</li>
+                          <ul>                                                                           
+                        </div>
+                        <div class="tabs__block" id="tab_03">
+                          <p class="tabs__text">
+                            <span>При заказе мы можем оперативно доставить нашу продукцию в любой регион.</span>
+                            Доставка по регионам России производится из г. Москва силами основных Транспортных компаний по тарифам и срокам, указанным на сайте Транспортной компании.
+                          </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__body">
+                <h4 class="order__choice">Выберите формат</h4>
+                <div class="order__formats">
+                  <div class="order__small order__format">
+                    <div class="order__format-item">
+                      <img class="order__form-img" src="img/order/box-small.svg" alt="">
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">Коробка</div>
+                      <div class="order__format-size">2500 штук</div>
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">кол-во:</div>
+                      <div class="order__format-group">
+                        <button class="order__control order__remove">-</button>
+                        <input class="order__count" name="small-count" type="number" value="0">
+                        <button class="order__control order__add">+</button>
+                    </div>
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">сумма:</div>
+                      <div class="order__format-price"><span class="order__format-sum">750</span> <span class="order__format-currency">руб.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="order__big order__format">
+                    <div class="order__format-item">
+                      <img class="order__form-img" src="img/order/box-big.svg" alt="">  
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">Коробка</div>
+                      <div class="order__format-size">20000 штук</div>
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">кол-во:</div>
+                      <div class="order__format-group">
+                        <button class="order__control order__remove">-</button>
+                        <input class="order__count" name="big-count" type="number" value="0">
+                        <button class="order__control order__add">+</button>
+                    </div>
+                    </div>
+
+                    <div class="order__format-item">
+                      <div class="order__format-text">сумма:</div>
+                      <div class="order__format-price"><span class="order__format-sum">6000</span> <span class="order__format-currency">руб.</span></div>
+                    </div>
+                  </div>
+              </div>
+              
+              <div class="order__by">
+                <div class="order__total">
+                  <p class="order__by-text">Итого:</p>
+                  <div class="order__total-price"><span class="order__total-sum">0</span> <span class="order__total-currency">руб.</span></div>
+                </div>
+
+                <button class="order__btn btn" data-modal="#modal__order">Заказать</button>
+              </div>
+            </div>
+
+            <a class="order__individual" href="#individual-price">Хотите индивидуальную цену?</a>              
+          </div> <!-- /.order__inner -->
+        </div> <!-- /.container -->
+      </section> <!-- /.order -->
+    </div> <!-- /.screen -->
+
+    <div class="screen">
+      <div class="individual-price screen__body" id="individual-price">
+        <div class="container">
+          <div class="individual-price__inner">
+            <div class="individual-price__head head">
+              <h2 class="individual-price__title title">Индивидуальная цена</h2>
+              <p class="individual-price__text individual-price__text--big text">Мы предлагаем лучшее соотношение «цена-качество» на российском рынке и оптимальные условия сотрудничества. Если вы заинтересованы в сотрудничестве, оставьте заявку, и мы обязательно свяжемся с вами.</p>
+
+              <p class="individual-price__text individual-price__text--small text">
+                Если вы заинтересованы в сотрудничестве, оставьте заявку, и мы обязательно свяжемся с вами.
+              </p>
+            </div>
+            <div class="individual-price__form">
+              <form class=" form" action="#">
+                <div class="form__group">
+                  <input class="form__item" type="text" name="name" placeholder="Ваше имя*">
+                  <input class="form__item" type="tel" name="phone" placeholder="Ваш телефон*">
+                </div>
+
+                <div class="form__group">
+                  <input class="form__item" type="email" name="email" placeholder="Ваш e-mail*">
+                  <input class="form__item" type="text" name="comment" placeholder="Ваш комментарий*">
+                </div>
+
+                <div class="form__group">
+                  <p class="form__text">Нажимая на кнопку «Оставить заявку», Вы соглашаетесь с нашей <a class="form__link" href="#" data-modal="#modal__privacy">политикой обработки персональных данных и конфиденциальности</a>.</p>
+                  <button class="form__btn btn" type="button" data-modal="#modal__request">Оставить заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> <!-- /.container -->
+      </div> <!-- /.individual-price -->
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <h4 class="footer__contacts" id="contacts">Наши контакты</h4>
+            <div class="footer__items">
+              <div class="footer__item contacts">
+                <h3 class="contacts__title">Центральный офис</h3>
+                <address class="contacts__address">195221, Россия, г. Санкт-Петербург, ул. Ключевая, дом 30, литера А, помещение 303
+                </address>
+                <a class="contacts__phone" href="tel:+78126004801">+7 (812 ) 600-48-01</a>
+              </div>
+
+              <div class="footer__item contacts">
+                <h3 class="contacts__title">Почтовый адрес</h3>
+                <address class="contacts__address">182500, Россия, Псковская область, г. Невель,
+                  улица Лермонтова, дом 13
+                </address>
+                <a class="contacts__phone" href="tel:+78115121785">+7 (81151) 2-17-85</a>
+              </div>
+
+              <div class="footer__item contacts">
+                <h3 class="contacts__title">Контакты</h3>
+                <a class="contacts__phone" href="tel:88007759505">8 (800) 775-95-05</a>
+                <a class="contacts__email" href="mailto:info@nevelvendmoloko.ru">info@nevelvendmoloko.ru</a>
+
+                <div class="contacts__soc">
+                  <a class="contacts__soc-link" href="#" target="_blank">
+                    <svg class="contacts__soc-item">
+                      <use xlink:href="#instagram"></use>
+                    </svg>
+                  </a>
+
+                  <a class="contacts__soc-link" href="#" target="_blank">
+                    <svg class="contacts__soc-item"> 
+                      <use xlink:href="#facebook"></use>
+                    </svg>
+                  </a>
+
+                  <a class="contacts__soc-link" href="#" target="_blank">
+                    <svg class="contacts__soc-item">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="privacy">
+              <div class="privacy__item privacy__copyright">© 2021 «НЕВЕЛЬКОНСЕРВМОЛОКО»</div>
+              <a class="privacy__item privacy__policy" href='#' data-modal="#modal__privacy">Политика конфиденциальности</a>
+              <div class="privacy__item privacy__author">Разработка сайта — Webformula</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div> <!-- /.screen -->
+
+<!-- Animation -->
+    <section class="anim-box">
+      <div id="anim"></div>
+    </section>
+
+
+
+
+<!-- Modal -->
+    <div class="modal">
+
+      <div class="modal__body">
+        <div class="modal__inner">
+          <button class="modal__close">&#10006;</button>
+          <div class="modal__order" id="modal__order">
+            
+            <div class="modal__head">
+              <h2 class="modal__title">Заказ продукции</h2>
+              <p class="modal__text">Пожалуйста, оставьте нам данные для связи с вами, чтобы мы могли договориться о поставке</p>
+            </div>
+            <div class="modal__form">
+              <form class="form" action="#">
+                <div class="form__group">
+                  <input class="form__item" type="text" name="name" placeholder="Ваше имя*">
+                  <input class="form__item" type="tel" name="phone" placeholder="Ваш телефон*">
+                </div>
+
+                <div class="form__group">
+                  <input class="form__item form__item--message" type="text" name="message" placeholder="Ваше сообщение">
+                </div>
+
+                <p class="form__text">Внимание, нажимая на кнопку «Заказать», Вы принимаете нашу <a class="form__link" href="#" data-modal="#modal__privacy">политику конфиденциальности и обработки данных</a>.</p>
+
+                <input class="form__btn btn" type="submit" value="Заказать">
+              </form>
+            </div> 
+          </div> <!-- /.modal__order -->
+
+
+
+          <div class="modal__request" id="modal__request">
+            <div class="modal__head">
+              <h2 class="modal__title">Спасибо за заявку!</h2>
+              <p class="modal__text">Мы очень рады, что решили с нами связаться. Пожалуйста, ожидайте. В ближайшее время с вами свяжется представитель нашей компании.</p>
+            </div>
+            <button class="modal__btn btn">Ожидаю звонка</button>
+          </div> <!-- /.modal__rquest -->
+
+
+
+          <div class="modal__privacy" id="modal__privacy">
+            <div class="modal__head">
+              <h2 class="modal__title">Политика конфиденциальности</h2>
+            </div>
+            <ul class="tree modal__list">
+              <li class="modal__list-item"> <span class="tree__head">Определение терминов</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                  <li class="modal__list-item">
+                    <span>
+                      Пользователь использует Платформу и элементы Библиотеки согласно условиям Соглашения и выбранного Тарифа, а также уплачивает вознаграждение, если иное не предусмотрено Тарифом.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="modal__list-item"> <span class="tree__head">Общие положения</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="modal__list-item"> <span class="tree__head">Предмет политики конфиденциальности</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="modal__list-item"> <span class="tree__head">Цели сбора персональной информации пользователя</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+               <li class="modal__list-item"> <span class="tree__head"> Способы и сроки обработки персональной информации</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="modal__list-item"> <span class="tree__head">Обязательства сторон</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="modal__list-item"> <span class="tree__head">Ответственность сторон</span>
+                <ul class="tree__item modal__list">
+                  <li class="modal__list-item">
+                    <span>
+                      Администрация предоставляет неисключительную лицензию на использование Платформы и элементов Библиотеки, а также оказывает сопутствующие услуги.
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul> <!-- /.tree -->
+            
+          </div> <!-- /.modal__privacy -->
+        </div> <!-- /.modal__inner -->
+      </div>  <!-- /.modal___body -->
+    </div> <!-- /.modal -->
+  </div> <!-- /.wrapper -->
+
+
+
+  
+
+  
+  
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
