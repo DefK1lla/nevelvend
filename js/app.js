@@ -3,12 +3,12 @@ const links = document.querySelectorAll('[data-scroll]');
 
 let elementId, elementOffset;
 
-links.forEach(function(link) {
-  link.addEventListener('click', function(e) {
+links.forEach(function (link) {
+  link.addEventListener('click', function (e) {
     e.preventDefault();
     elementId = link.dataset.scroll;
     elementOffset = document.querySelector(elementId).getBoundingClientRect().top;
-    
+
     window.scrollBy({
       top: elementOffset,
       behavior: "smooth"
@@ -21,14 +21,14 @@ links.forEach(function(link) {
 const menuBtn = document.querySelector('.menu-btn'),
   menu = document.querySelector('.menu');
 
-menuBtn.addEventListener('click', function() {
-  if(menuBtn.classList.contains('menu-btn--active')) {
+menuBtn.addEventListener('click', function () {
+  if (menuBtn.classList.contains('menu-btn--active')) {
     menuBtn.classList.remove('menu-btn--active');
   } else {
     menuBtn.classList.add('menu-btn--active');
   }
 
-  if(menu.classList.contains('menu--active')) {
+  if (menu.classList.contains('menu--active')) {
     menu.classList.remove('menu--active');
   } else {
     menu.classList.add('menu--active');
@@ -41,9 +41,9 @@ menuBtn.addEventListener('click', function() {
 const tabsBtns = document.querySelectorAll('.tabs__item'),
   tabsBody = document.querySelectorAll('.tabs__block');
 
-tabsBtns.forEach(function(btn){
-  btn.addEventListener('click', function() {
-    tabsBody.forEach(function(item){
+tabsBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    tabsBody.forEach(function (item) {
       item.classList.remove('tab--active');
     });
 
@@ -55,7 +55,7 @@ tabsBtns.forEach(function(btn){
 
 
 // Price calc
-const  controlBtns = document.querySelectorAll('.order__control'),
+const controlBtns = document.querySelectorAll('.order__control'),
   orderCount = document.querySelectorAll('.order__count'),
   smallFormat = document.querySelector('.order__small'),
   smallCount = smallFormat.querySelector('.order__count'),
@@ -64,34 +64,34 @@ const  controlBtns = document.querySelectorAll('.order__control'),
   bigCount = bigFormat.querySelector('.order__count'),
   bigSum = +bigFormat.querySelector('.order__format-sum').textContent,
   totalSum = document.querySelector('.order__total-sum');
-  
+
 let orderFormat, count;
 
 
-const totalPriceChanger = function() {
+const totalPriceChanger = function () {
   totalSum.textContent = bigCount.value * bigSum + smallCount.value * smallSum;
 };
 
 
-controlBtns.forEach(function(btn) {
-  btn.addEventListener('click', function() {
+controlBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
     orderFormat = btn.closest('.order__format');
     count = orderFormat.querySelector('.order__count');
 
-    if(btn.textContent === '+') {
+    if (btn.textContent === '+') {
       count.value++;
-    } else if(count.value === '0') {
+    } else if (count.value === '0') {
       return;
-    } else if(btn.textContent === '-') {
+    } else if (btn.textContent === '-') {
       count.value--;
     }
     totalPriceChanger();
   });
 });
 
-orderCount.forEach(function(count) {
-  count.addEventListener('input', function() {
-    if(count.value < 0) {
+orderCount.forEach(function (count) {
+  count.addEventListener('input', function () {
+    if (count.value < 0) {
       count.value = 0;
     }
 
@@ -106,10 +106,10 @@ const modalOpenBtns = document.querySelectorAll('[data-modal]'),
 
 let modalItem;
 
-modalOpenBtns.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    
-    if(modalItem != undefined){
+modalOpenBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+
+    if (modalItem != undefined) {
       modalItem.classList.remove('modal--active');
     }
 
@@ -122,7 +122,7 @@ modalOpenBtns.forEach(function(btn) {
 
 const modalClose = document.querySelector('.modal__close');
 
-modalClose.addEventListener('click', function() {
+modalClose.addEventListener('click', function () {
   modal.classList.remove('modal--active');
   modalItem.classList.remove('modal--active');
 });
@@ -130,9 +130,9 @@ modalClose.addEventListener('click', function() {
 
 const modalBtn = document.querySelector('.modal__btn');
 
-modalBtn.addEventListener('click', function() {
+modalBtn.addEventListener('click', function () {
   modal.classList.remove('modal--active');
-  modalItem.classList.remove('modal--active'); 
+  modalItem.classList.remove('modal--active');
 });
 
 
@@ -142,17 +142,17 @@ const treeHeads = document.querySelectorAll('.tree__head');
 
 let treeItemContainer, treeItem;
 
-treeHeads.forEach(function(btn) {
-  btn.addEventListener('click', function(){
-    if(btn.classList.contains('tree__head--active')){
+treeHeads.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    if (btn.classList.contains('tree__head--active')) {
       btn.classList.remove('tree__head--active');
     } else {
       btn.classList.add('tree__head--active');
     }
     treeItemContainer = btn.closest('.modal__list-item');
     treeItem = treeItemContainer.querySelector('.tree__item');
-    
-    if(treeItem.classList.contains('tree--active')){
+
+    if (treeItem.classList.contains('tree--active')) {
       treeItem.classList.remove('tree--active');
     } else {
       treeItem.classList.add('tree--active');
@@ -181,21 +181,22 @@ animScroll = bodymovin.loadAnimation(animData);
 
 
 animScroll.addEventListener('DOMLoaded', function () {
-  tl = new TimelineMax({repeat: 0});
-  tl.to({frame: 0}, 1, {
+  tl = new TimelineMax({ repeat: 0 });
+  tl.to({ frame: 0 }, 1, {
     frame: animScroll.totalFrames - 1,
-    onUpdate: function() {
+    onUpdate: function () {
       animScroll.goToAndStop(this.target.frame, true);
     },
-    Ease:Linear.easeNone
+    Ease: Linear.easeNone
   });
-  
+
   var controller = new ScrollMagic.Controller();
 
   var scene = new ScrollMagic.Scene({
     triggerElement: ".wrapper",
     offset: innerHeight / 2,
-    duration: innerHeight * 4.5}).setTween(tl).setPin(anim).addTo(controller);
+    duration: innerHeight * 3.5
+  }).setTween(tl).setPin(anim).addTo(controller);
 });
 
 
